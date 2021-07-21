@@ -8,12 +8,10 @@ const Chart = ({country}) =>{
     useEffect(()=>{
         const fetchAPI = async(checkCountry) =>{
             
-            //console.log(c);
             if (checkCountry!==""){
-                console.log(checkCountry);
+
                 setdailyData(await fetchData(checkCountry));
             }else{
-                console.log('Vilakazi');
                 setdailyData(await fetchChart());
             }
             
